@@ -39,6 +39,43 @@
 
 <br>
 
+## 시작하기 전에: AI 에이전트가 필요합니다
+
+cbetalk-mcp는 혼자 돌아가는 앱이 아닙니다. **Claude Code, Codex, Antigravity 같은 AI 에이전트**에 "메신저 쪽지를 다루는 손"을 붙여 주는 도구입니다. 말을 알아듣고 어떤 쪽지 기능을 쓸지 고르는 건 에이전트가 합니다.
+
+| 상황 | 이렇게 |
+|---|---|
+| Claude Code·Codex를 이미 쓴다 | 그대로 설치로 넘어갑니다. 설치 화면에서 체크하면 자동으로 연결됩니다. |
+| **에이전트가 없다** | **무료인 Google Antigravity**를 먼저 설치합니다. 아래 순서. |
+| 인터넷 AI 없이 쓰고 싶다 | 로컬 2B 모델로 씁니다. 정해진 일(쪽지 목록·설문 취합 등)만 하고 답이 조금 느립니다. |
+
+### 무료 Google Antigravity 설치
+
+개인 Google 계정으로 무료로 쓸 수 있습니다(사용량 한도 있음). 설치 파일이 자동으로 연결하는 것은 명령 창용 **`agy`** 입니다.
+
+1. PowerShell을 열고 한 줄을 붙여 넣습니다.
+   ```powershell
+   irm https://antigravity.google/cli/install.ps1 | iex
+   ```
+2. PowerShell에서 `agy`를 한 번 실행해 Google 계정으로 로그인합니다.
+3. 그다음 cbetalk-mcp를 설치합니다. **에이전트를 먼저 깔아야 자동으로 연결됩니다.**
+
+<a href="https://antigravity.google/download"><img src="https://img.shields.io/badge/Google%20Antigravity-%EB%AC%B4%EB%A3%8C%20%EC%84%A4%EC%B9%98-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google Antigravity 무료 설치"></a>
+&nbsp;<sub><a href="https://antigravity.google/docs/getting-started?tab=cli">공식 설치 안내</a></sub>
+
+<details>
+<summary><b>cbetalk-mcp를 먼저 깔았다면</b></summary>
+<br>
+
+설치 파일을 한 번 더 실행해 에이전트를 체크하거나, PowerShell에서 아래 명령으로 연결합니다(`agy` 자리에 `claude`, `codex`, `all`도 됩니다).
+
+```powershell
+& "$env:LOCALAPPDATA\Programs\cbetalk-mcp\node\node.exe" "$env:LOCALAPPDATA\Programs\cbetalk-mcp\scripts\register-clients.mjs" add agy
+```
+</details>
+
+<br>
+
 ## 내려받을 때: Edge가 다운로드를 막는다면
 
 > [!TIP]
