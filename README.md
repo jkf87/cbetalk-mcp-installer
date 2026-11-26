@@ -10,7 +10,7 @@
 
 <br>
 
-<a href="https://github.com/jkf87/cbetalk-mcp-installer/releases/download/v0.4.1/cbetalk-mcp-setup-0.4.1.exe"><img src="https://img.shields.io/badge/%EC%84%A4%EC%B9%98%20%ED%8C%8C%EC%9D%BC%20%EB%B0%9B%EA%B8%B0-v0.4.1%20%C2%B7%2025MB-1f5fd6?style=for-the-badge&logo=windows&logoColor=white" alt="설치 파일 받기 v0.4.1 · 25MB"></a>
+<a href="https://github.com/jkf87/cbetalk-mcp-installer/releases/download/v0.4.2/cbetalk-mcp-setup-0.4.2.exe"><img src="https://img.shields.io/badge/%EC%84%A4%EC%B9%98%20%ED%8C%8C%EC%9D%BC%20%EB%B0%9B%EA%B8%B0-v0.4.2%20%C2%B7%2025MB-1f5fd6?style=for-the-badge&logo=windows&logoColor=white" alt="설치 파일 받기 v0.4.2 · 25MB"></a>
 &nbsp;
 <a href="https://cbetalk-mcp.netlify.app"><img src="https://img.shields.io/badge/%EC%84%A4%EC%B9%98%C2%B7%EC%82%AC%EC%9A%A9%20%EC%95%88%EB%82%B4-%EA%B7%B8%EB%A6%BC%EC%9C%BC%EB%A1%9C%20%EB%B3%B4%EA%B8%B0-d42a2f?style=for-the-badge" alt="설치·사용 안내 그림으로 보기"></a>
 
@@ -65,7 +65,7 @@ cbetalk-mcp는 혼자 돌아가는 앱이 아닙니다. **Claude Code, Codex, An
 
 ### cbetalk-mcp를 먼저 깔고 에이전트를 나중에 깔았다면
 
-설치할 때 없던 에이전트는 자동으로 연결되지 않습니다. **가장 쉬운 방법: 시작 메뉴 → cbetalk-mcp → `AI 도구에 다시 연결`** (v0.4.1부터). 명령으로 하려면 아래 셋 중 하나를 쓰고, 에이전트를 새로 실행하세요.
+설치할 때 없던 에이전트는 자동으로 연결되지 않습니다. **가장 쉬운 방법: 시작 메뉴에서 `cbetalk`를 검색 → `cbetalk AI 도구에 다시 연결`** (v0.4.1부터, v0.4.1에서는 이름이 `AI 도구에 다시 연결`). 명령으로 하려면 아래 셋 중 하나를 쓰고, 에이전트를 새로 실행하세요.
 
 **설치 위치**
 
@@ -103,7 +103,7 @@ MCP 서버를 하나 등록해 줘. 이름은 cbetalk이고, 실행 명령은 %L
 ## 내려받을 때: Edge가 다운로드를 막는다면
 
 > [!TIP]
-> **"cbetalk-mcp-setup-0.4.1.exe은(는) 일반적으로 다운로드되지 않습니다"** 가 뜨면, 내려받은 사람이 아직 적은 새 파일이라 Edge가 한 번 더 확인하는 것입니다. 학교 PC에서 자주 생깁니다.
+> **"cbetalk-mcp-setup-0.4.2.exe은(는) 일반적으로 다운로드되지 않습니다"** 가 뜨면, 내려받은 사람이 아직 적은 새 파일이라 Edge가 한 번 더 확인하는 것입니다. 학교 PC에서 자주 생깁니다.
 
 1. 다운로드 목록에서 파일 이름에 마우스를 올리고 **`…`(추가 작업)** 을 누릅니다. 목록이 안 보이면 <kbd>Ctrl</kbd>+<kbd>J</kbd>.
 2. **유지**를 누릅니다.
@@ -176,6 +176,22 @@ Chrome에서는 다운로드 목록의 **유지**(또는 **그래도 다운로�
 | **Codex** | 도구를 처음 쓸 때 허용 | `3번 쪽지 답장 초안 써 줘` |
 | **Antigravity (agy)** | 허용 목록에 `mcp(cbetalk/*)`를 넣으면 매번 묻지 않음 | `지난주 보낸 쪽지에서 연수 일정 찾아 줘` |
 
+### 채팅창에 `/cbe`를 치면 빠른 명령 (v0.4.2부터)
+
+말로 부탁해도 되지만, 무엇을 할 수 있는지 모르겠으면 `/cbe`를 쳐 보세요. 앱에 따라 `/mcp__cbetalk__cbetalk-unread`처럼 길게 보입니다.
+
+| 명령 | 하는 일 |
+|---|---|
+| `cbetalk-unread` | 안 읽은 쪽지 보기 (읽음 처리 안 함) |
+| `cbetalk-search` | 쪽지 검색 |
+| `cbetalk-find` | 사람 찾기 |
+| `cbetalk-send` | 쪽지 보내기 (미리보기 먼저) |
+| `cbetalk-help` | 할 수 있는 일과 예시 말투 |
+| `cbetalk-survey` · `cbetalk-draft` | 설문 취합 · 쪽지 초안 (로컬 2B 모드) |
+
+> [!NOTE]
+> **안 보이면 앱을 완전히 껐다 켭니다.** 설치나 연결 전부터 켜져 있던 앱(Codex 앱, Antigravity 앱, Claude 데스크톱)은 새로 켜야 cbetalk를 불러옵니다. Claude Code에서는 `/mcp`로 연결 상태를 볼 수 있습니다.
+
 ### 로컬 2B로 설문 취합
 
 시작 메뉴의 **로컬 모델 받기**(처음 한 번, 1.4GB) → **로컬 모델 대화**. 메신저에 닿지 않는 **연습 모드**도 있습니다.
@@ -202,12 +218,12 @@ Chrome에서는 다운로드 목록의 **유지**(또는 **그래도 다운로�
 <br>
 
 ```powershell
-Get-FileHash "$env:USERPROFILE\Downloads\cbetalk-mcp-setup-0.4.1.exe"
+Get-FileHash "$env:USERPROFILE\Downloads\cbetalk-mcp-setup-0.4.2.exe"
 ```
 
 릴리스의 `SHA256SUMS.txt` 값과 같으면 됩니다.
 
-v0.4.1: `22f7c26631b0a458e8d149802a4c05fe7bf931110c15e07495d23b76e62984b4`
+v0.4.2: `650b2942968b495fb49a40e6a5b11cc818bbbda847aa7262e891e6753aecfc92`
 </details>
 
 <details>
