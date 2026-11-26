@@ -39,6 +39,19 @@
 
 <br>
 
+## 내려받을 때: Edge가 다운로드를 막는다면
+
+> [!TIP]
+> **"cbetalk-mcp-setup-0.4.0.exe은(는) 일반적으로 다운로드되지 않습니다"** 가 뜨면, 내려받은 사람이 아직 적은 새 파일이라 Edge가 한 번 더 확인하는 것입니다. 학교 PC에서 자주 생깁니다.
+
+1. 다운로드 목록에서 파일 이름에 마우스를 올리고 **`…`(추가 작업)** 을 누릅니다. 목록이 안 보이면 <kbd>Ctrl</kbd>+<kbd>J</kbd>.
+2. **유지**를 누릅니다.
+3. "이 앱이 디바이스에 해를 끼칠 수 있습니다" 창에서 **추가 정보 표시**를 펼치고 **그래도 계속**을 누릅니다.
+
+Chrome에서는 다운로드 목록의 **유지**(또는 **그래도 다운로드**)를 누르면 됩니다.
+
+<br>
+
 ## 처음 실행할 때: 파란 경고 창 넘기기
 
 > [!IMPORTANT]
@@ -157,6 +170,8 @@ v0.4.0: `75d44e2c0bb9bd826c105aa5efb32ee7d9d591f638c36a986976cd725b98214e`
 <div align="center">
 
 **제작자: 코난쌤**
+
+<a href="https://www.youtube.com/@conanssam"><img src="https://img.shields.io/badge/YouTube-%40conanssam-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube @conanssam"></a>
 
 <sub><a href="https://cbetalk-mcp.netlify.app">안내 페이지</a> · <a href="https://github.com/jkf87/cbetalk-mcp-installer/releases">모든 버전</a></sub>
 
