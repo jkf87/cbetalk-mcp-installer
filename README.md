@@ -63,16 +63,40 @@ cbetalk-mcp는 혼자 돌아가는 앱이 아닙니다. **Claude Code, Codex, An
 <a href="https://antigravity.google/download"><img src="https://img.shields.io/badge/Google%20Antigravity-%EB%AC%B4%EB%A3%8C%20%EC%84%A4%EC%B9%98-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google Antigravity 무료 설치"></a>
 &nbsp;<sub><a href="https://antigravity.google/docs/getting-started?tab=cli">공식 설치 안내</a></sub>
 
-<details>
-<summary><b>cbetalk-mcp를 먼저 깔았다면</b></summary>
-<br>
+### cbetalk-mcp를 먼저 깔고 에이전트를 나중에 깔았다면
 
-설치 파일을 한 번 더 실행해 에이전트를 체크하거나, PowerShell에서 아래 명령으로 연결합니다(`agy` 자리에 `claude`, `codex`, `all`도 됩니다).
+설치할 때 없던 에이전트는 자동으로 연결되지 않습니다. 아래 셋 중 하나로 연결하고 에이전트를 새로 실행하세요.
+
+**설치 위치**
+
+| | 경로 |
+|---|---|
+| 설치 폴더 | `%LOCALAPPDATA%\Programs\cbetalk-mcp` (보통 `C:\Users\내이름\AppData\Local\Programs\cbetalk-mcp`) |
+| 실행 파일 | `…\cbetalk-mcp\node\node.exe` |
+| MCP 서버 | `…\cbetalk-mcp\server.mjs` |
+
+**방법 1. 한 번에 연결** (이 PC에서 찾은 에이전트 모두, PowerShell)
 
 ```powershell
-& "$env:LOCALAPPDATA\Programs\cbetalk-mcp\node\node.exe" "$env:LOCALAPPDATA\Programs\cbetalk-mcp\scripts\register-clients.mjs" add agy
+& "$env:LOCALAPPDATA\Programs\cbetalk-mcp\node\node.exe" "$env:LOCALAPPDATA\Programs\cbetalk-mcp\scripts\register-clients.mjs" add all
 ```
-</details>
+
+**방법 2. 에이전트별 한 줄** (PowerShell)
+
+```powershell
+# Antigravity (agy)
+agy mcp add cbetalk -- "$env:LOCALAPPDATA\Programs\cbetalk-mcp\node\node.exe" "$env:LOCALAPPDATA\Programs\cbetalk-mcp\server.mjs"
+# Claude Code
+claude mcp add cbetalk --scope user -- "$env:LOCALAPPDATA\Programs\cbetalk-mcp\node\node.exe" "$env:LOCALAPPDATA\Programs\cbetalk-mcp\server.mjs"
+# Codex
+codex mcp add cbetalk -- "$env:LOCALAPPDATA\Programs\cbetalk-mcp\node\node.exe" "$env:LOCALAPPDATA\Programs\cbetalk-mcp\server.mjs"
+```
+
+**방법 3. 에이전트에게 부탁하기** (명령이 낯설면 대화창에 그대로 붙여 넣기)
+
+```text
+MCP 서버를 하나 등록해 줘. 이름은 cbetalk이고, 실행 명령은 %LOCALAPPDATA%\Programs\cbetalk-mcp\node\node.exe, 인자는 %LOCALAPPDATA%\Programs\cbetalk-mcp\server.mjs 야. 등록한 뒤 어떻게 됐는지 알려 줘.
+```
 
 <br>
 
